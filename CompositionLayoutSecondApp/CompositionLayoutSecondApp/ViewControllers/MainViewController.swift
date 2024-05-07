@@ -9,6 +9,9 @@ import UIKit
 
 final class MainViewController: UIViewController {
 
+    // MARK: - Public Properties
+    var sections: [CollectionSection] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

@@ -10,8 +10,8 @@ import Foundation
 struct CollectionSection: Identifiable {
     let id: String = UUID().uuidString
     let header: String
-    var footer: String? = nil
     let items: [CollectionItem]
+    var footer: String? = nil
     
     static func getSections() -> [CollectionSection] {
         
@@ -85,8 +85,8 @@ struct CollectionSection: Identifiable {
         
         let newsSection = CollectionSection(
             header: "Новости",
-            footer: "Lorem ipsum dolor sit amet consectetur. Enim suspendisse accumsan sed augue interdum velit aliquam lobortis donec.",
-            items: news
+            items: news,
+            footer: "Главные новости дня"
         )
         
         let eventsSection = CollectionSection(header: "События", items: events)

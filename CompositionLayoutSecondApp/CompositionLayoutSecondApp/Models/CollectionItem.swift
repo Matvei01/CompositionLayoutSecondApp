@@ -7,6 +7,11 @@
 
 import Foundation
 
-struct CollectionItem {
-    
+struct CollectionItem: Identifiable {
+    let id: String = UUID().uuidString
+    let image: String
+    let text: String
+    var name: String? = nil
+    var header: String? = nil
+    var date: String? = nil
 }

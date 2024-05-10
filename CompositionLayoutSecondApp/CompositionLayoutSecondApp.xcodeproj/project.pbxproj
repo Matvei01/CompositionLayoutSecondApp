@@ -22,6 +22,9 @@
 		1A6070DD2BEA27FF005797E9 /* EventViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070DC2BEA27FF005797E9 /* EventViewCell.swift */; };
 		1A6070DF2BEA283B005797E9 /* UserViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070DE2BEA283B005797E9 /* UserViewCell.swift */; };
 		1A6070E22BEA292A005797E9 /* CellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070E12BEA292A005797E9 /* CellProtocol.swift */; };
+		1A6070EA2BEA74B8005797E9 /* ReuseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070E92BEA74B8005797E9 /* ReuseImageView.swift */; };
+		1A6070EC2BEA7525005797E9 /* ReuseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070EB2BEA7525005797E9 /* ReuseLabel.swift */; };
+		1A6070EE2BEA7CC6005797E9 /* ReuseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		1A6070DC2BEA27FF005797E9 /* EventViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewCell.swift; sourceTree = "<group>"; };
 		1A6070DE2BEA283B005797E9 /* UserViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewCell.swift; sourceTree = "<group>"; };
 		1A6070E12BEA292A005797E9 /* CellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellProtocol.swift; sourceTree = "<group>"; };
+		1A6070E92BEA74B8005797E9 /* ReuseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseImageView.swift; sourceTree = "<group>"; };
+		1A6070EB2BEA7525005797E9 /* ReuseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseLabel.swift; sourceTree = "<group>"; };
+		1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		1A6070AE2BEA2142005797E9 /* CompositionLayoutSecondApp */ = {
 			isa = PBXGroup;
 			children = (
+				1A6070E82BEA7486005797E9 /* ReuseViews */,
 				1A6070E02BEA28C3005797E9 /* Protocols */,
 				1A6070C32BEA22CF005797E9 /* ViewControllers */,
 				1A6070CB2BEA2472005797E9 /* Models */,
@@ -150,6 +157,16 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1A6070E82BEA7486005797E9 /* ReuseViews */ = {
+			isa = PBXGroup;
+			children = (
+				1A6070E92BEA74B8005797E9 /* ReuseImageView.swift */,
+				1A6070EB2BEA7525005797E9 /* ReuseLabel.swift */,
+				1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */,
+			);
+			path = ReuseViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -223,13 +240,16 @@
 				1A6070C92BEA242E005797E9 /* ProfileViewController.swift in Sources */,
 				1A6070E22BEA292A005797E9 /* CellProtocol.swift in Sources */,
 				1A6070B42BEA2142005797E9 /* MainViewController.swift in Sources */,
+				1A6070EA2BEA74B8005797E9 /* ReuseImageView.swift in Sources */,
 				1A6070CF2BEA24E0005797E9 /* CollectionItem.swift in Sources */,
 				1A6070C52BEA2376005797E9 /* TabBarController.swift in Sources */,
 				1A6070B02BEA2142005797E9 /* AppDelegate.swift in Sources */,
+				1A6070EC2BEA7525005797E9 /* ReuseLabel.swift in Sources */,
 				1A6070D12BEA250C005797E9 /* User.swift in Sources */,
 				1A6070DD2BEA27FF005797E9 /* EventViewCell.swift in Sources */,
 				1A6070DF2BEA283B005797E9 /* UserViewCell.swift in Sources */,
 				1A6070CD2BEA24B5005797E9 /* CollectionSection.swift in Sources */,
+				1A6070EE2BEA7CC6005797E9 /* ReuseButton.swift in Sources */,
 				1A6070DB2BEA26D1005797E9 /* NewsViewCell.swift in Sources */,
 				1A6070B22BEA2142005797E9 /* SceneDelegate.swift in Sources */,
 				1A6070C72BEA23C8005797E9 /* MessageViewController.swift in Sources */,

@@ -24,20 +24,20 @@ struct CollectionSection: Identifiable {
             ),
             CollectionItem(
                 image: "train",
-                text: "Рекордное путешествие началось вечером 20 марта 2024 года...",
+                text: "Рекордное путешествие началось вечером...",
                 header: "Поезд на водороде попал в книгу Гиннеса",
                 date: "6 мая 2024"
             ),
             CollectionItem(
-                image: "airplane",
-                text: "Первый китайский самолет “сделанный из отечественных деталей...",
-                header: "Китайский самолет составит конкуренцию Airbus и Boeing",
+                image: "hindu",
+                text: "Индия, со времен обретения независимости...",
+                header: "Индия смогла снизить уровень бедности",
                 date: "9 мая 2024"
             ),
             CollectionItem(
                 image: "bmw",
                 text: "BMW Vision Neue Klasse X — это электрический внедорожник...",
-                header: "В BMW показали новый электрический внедорожник",
+                header: "В BMW показали новый внедорожник",
                 date: "10 мая 2024"
             )
         ]
@@ -57,6 +57,14 @@ struct CollectionSection: Identifiable {
             CollectionItem(
                 image: "paint",
                 text: "Креативное пространство «Люмьер-Холл» приглашает полюбоваться невероятными картинами поэта моря Ивана..."
+            ),
+            CollectionItem(
+                image: "sculpture",
+                text: "Если вы ищете необычное хобби или просто хотите расслабиться в творческой атмосфере, занятие в студии..."
+            ),
+            CollectionItem(
+                image: "dinner",
+                text: "Компания Fastlife приглашает на групповые свидания в необычном формате. Миссия проекта — помочь одиноким..."
             )
         ]
         
@@ -83,16 +91,11 @@ struct CollectionSection: Identifiable {
             )
         ]
         
-        let newsSection = CollectionSection(
-            header: "Новости",
-            items: news,
-            footer: "Главные новости дня"
-        )
+        let newsSection = CollectionSection(header: "Новости", items: news, footer: "Главные новости недели")
         
         let eventsSection = CollectionSection(header: "События", items: events)
         
         let usersSection = CollectionSection(header: "Пользователи", items: users)
-        
         return [newsSection, eventsSection, usersSection]
     }
 }

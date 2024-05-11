@@ -25,6 +25,8 @@
 		1A6070EA2BEA74B8005797E9 /* ReuseImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070E92BEA74B8005797E9 /* ReuseImageView.swift */; };
 		1A6070EC2BEA7525005797E9 /* ReuseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070EB2BEA7525005797E9 /* ReuseLabel.swift */; };
 		1A6070EE2BEA7CC6005797E9 /* ReuseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */; };
+		1A6070F22BEFC1E3005797E9 /* MessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */; };
+		1A6070F42BEFC6CE005797E9 /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		1A6070E92BEA74B8005797E9 /* ReuseImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseImageView.swift; sourceTree = "<group>"; };
 		1A6070EB2BEA7525005797E9 /* ReuseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseLabel.swift; sourceTree = "<group>"; };
 		1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseButton.swift; sourceTree = "<group>"; };
+		1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewCell.swift; sourceTree = "<group>"; };
+		1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 				1A6070DA2BEA26D1005797E9 /* NewsViewCell.swift */,
 				1A6070DC2BEA27FF005797E9 /* EventViewCell.swift */,
 				1A6070DE2BEA283B005797E9 /* UserViewCell.swift */,
+				1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				1A6070E12BEA292A005797E9 /* CellProtocol.swift */,
+				1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -245,6 +251,8 @@
 				1A6070C52BEA2376005797E9 /* TabBarController.swift in Sources */,
 				1A6070B02BEA2142005797E9 /* AppDelegate.swift in Sources */,
 				1A6070EC2BEA7525005797E9 /* ReuseLabel.swift in Sources */,
+				1A6070F22BEFC1E3005797E9 /* MessageViewCell.swift in Sources */,
+				1A6070F42BEFC6CE005797E9 /* TableViewCellProtocol.swift in Sources */,
 				1A6070D12BEA250C005797E9 /* User.swift in Sources */,
 				1A6070DD2BEA27FF005797E9 /* EventViewCell.swift in Sources */,
 				1A6070DF2BEA283B005797E9 /* UserViewCell.swift in Sources */,

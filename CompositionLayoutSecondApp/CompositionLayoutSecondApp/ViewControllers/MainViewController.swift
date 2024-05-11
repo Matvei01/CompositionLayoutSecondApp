@@ -58,7 +58,7 @@ private extension MainViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 61, trailing: 30)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 68, leading: 30, bottom: 61, trailing: 30)
         return section
     }
     

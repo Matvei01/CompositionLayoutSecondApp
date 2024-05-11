@@ -25,7 +25,11 @@ final class TabBarController: UITabBarController {
         let messageVC = MessageViewController()
         messageVC.users = users
         
+        let navMessageVC = UINavigationController(rootViewController: messageVC)
+        
         let profileVC = ProfileViewController()
+        
+        let navProfileVC = UINavigationController(rootViewController: profileVC)
         
         viewControllers = [
             generateVC(
@@ -34,12 +38,12 @@ final class TabBarController: UITabBarController {
                 image: UIImage(systemName: "house.fill")
             ),
             generateVC(
-                rootViewController: messageVC,
+                rootViewController: navMessageVC,
                 title: "Messages",
                 image: UIImage(systemName: "message.fill")
             ),
             generateVC(
-                rootViewController: profileVC,
+                rootViewController: navProfileVC,
                 title: "Profile",
                 image: UIImage(systemName: "person.fill")
             )

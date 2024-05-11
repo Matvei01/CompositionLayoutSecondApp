@@ -9,6 +9,8 @@ import UIKit
 
 final class ProfileViewController: UIViewController {
 
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white

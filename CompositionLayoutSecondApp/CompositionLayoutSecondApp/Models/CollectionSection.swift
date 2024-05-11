@@ -72,22 +72,22 @@ struct CollectionSection: Identifiable {
             CollectionItem(
                 image: "Anna",
                 text: "Hey! What's up?",
-                name: "Anna"
+                name: "Anna Sidorova"
             ),
             CollectionItem(
                 image: "Artur",
                 text: "Hi! Are you going out?",
-                name: "Artur"
+                name: "Artur Bodrov"
             ),
             CollectionItem(
                 image: "Ivan",
                 text: "Hey! What time's practice?",
-                name: "Ivan"
+                name: "Ivan Ivanov"
             ),
             CollectionItem(
                 image: "Ruslan",
                 text: "Hey! Going to the soccer game?",
-                name: "Ruslan"
+                name: "Ruslan Bogatov"
             )
         ]
         

@@ -19,7 +19,6 @@ final class UserViewCell: UICollectionViewCell, CellProtocol {
     private lazy var headerLabel: UILabel = {
         let label = ReuseLabel(
             font: .systemFont(ofSize: 14, weight: .heavy),
-            textColor: .black,
             alignment: .center
         )
         return label
@@ -116,6 +115,7 @@ private extension UserViewCell {
     
     func setConstraintsForWriteButton() {
         NSLayoutConstraint.activate([
+            writeButton.topAnchor.constraint(equalTo: textLabel.bottomAnchor, constant: 11),
             writeButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 65),
             writeButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -65),
             writeButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -17)

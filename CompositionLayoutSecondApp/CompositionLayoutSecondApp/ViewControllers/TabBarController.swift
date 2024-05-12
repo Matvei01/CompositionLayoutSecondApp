@@ -13,6 +13,8 @@ final class TabBarController: UITabBarController {
     
     var users = User.getUsers()
     
+    var rows = TableViewRow.getRowItems()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         generateTabBar()
@@ -28,6 +30,7 @@ final class TabBarController: UITabBarController {
         let navMessageVC = UINavigationController(rootViewController: messageVC)
         
         let profileVC = ProfileViewController()
+        profileVC.rows = rows
         
         let navProfileVC = UINavigationController(rootViewController: profileVC)
         
@@ -50,7 +53,9 @@ final class TabBarController: UITabBarController {
         ]
     }
     
-    private func generateVC(rootViewController: UIViewController, title: String, image: UIImage?) -> UIViewController {
+    private func generateVC(rootViewController: UIViewController,
+                            title: String, image: UIImage?) -> UIViewController {
+        
         rootViewController.tabBarItem.title = title
         rootViewController.tabBarItem.image = image
         return rootViewController

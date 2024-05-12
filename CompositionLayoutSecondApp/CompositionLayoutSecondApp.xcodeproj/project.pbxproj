@@ -27,6 +27,7 @@
 		1A6070EE2BEA7CC6005797E9 /* ReuseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */; };
 		1A6070F22BEFC1E3005797E9 /* MessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */; };
 		1A6070F42BEFC6CE005797E9 /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */; };
+		1A6070F82BF0FF03005797E9 /* TableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F72BF0FF03005797E9 /* TableViewRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseButton.swift; sourceTree = "<group>"; };
 		1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewCell.swift; sourceTree = "<group>"; };
 		1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
+		1A6070F72BF0FF03005797E9 /* TableViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				1A6070CC2BEA24B5005797E9 /* CollectionSection.swift */,
 				1A6070CE2BEA24E0005797E9 /* CollectionItem.swift */,
 				1A6070D02BEA250C005797E9 /* User.swift */,
+				1A6070F72BF0FF03005797E9 /* TableViewRow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				1A6070E22BEA292A005797E9 /* CellProtocol.swift in Sources */,
 				1A6070B42BEA2142005797E9 /* MainViewController.swift in Sources */,
 				1A6070EA2BEA74B8005797E9 /* ReuseImageView.swift in Sources */,
+				1A6070F82BF0FF03005797E9 /* TableViewRow.swift in Sources */,
 				1A6070CF2BEA24E0005797E9 /* CollectionItem.swift in Sources */,
 				1A6070C52BEA2376005797E9 /* TabBarController.swift in Sources */,
 				1A6070B02BEA2142005797E9 /* AppDelegate.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 
 final class MessageViewController: UIViewController {
-
+    
     // MARK: - Public Properties
     var users: [User] = []
     
@@ -17,7 +17,6 @@ final class MessageViewController: UIViewController {
         let tableView = UITableView()
         tableView.register(MessageViewCell.self, forCellReuseIdentifier: MessageViewCell.reuseID)
         tableView.dataSource = self
-        tableView.delegate = self
         tableView.layer.cornerRadius = 30
         tableView.rowHeight = 101
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -47,18 +46,6 @@ extension MessageViewController: UITableViewDataSource {
         cell.layer.cornerRadius = 30
         cell.selectionStyle = .none
         return cell
-    }
-}
-
-// MARK: - UITableViewDelegate
-extension MessageViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let user = users[indexPath.row]
-        
-        let profileVC = ProfileViewController()
-        profileVC.user = user
-        
-        navigationController?.pushViewController(profileVC, animated: true)
     }
 }
 

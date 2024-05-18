@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - UserViewCell
 final class UserViewCell: UICollectionViewCell, CellProtocol {
     static var reuseID: String = "UserViewCell"
     
@@ -48,6 +49,7 @@ final class UserViewCell: UICollectionViewCell, CellProtocol {
         backgroundColor = .white
         clipsToBounds = true
         layer.cornerRadius = 20
+        
         setupView()
     }
     

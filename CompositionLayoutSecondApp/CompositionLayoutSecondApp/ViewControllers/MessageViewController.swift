@@ -55,14 +55,7 @@ private extension MessageViewController {
         view.backgroundColor = .secondarySystemBackground
         view.addSubview(messagesTableView)
         
-        setupNavigationBar()
-        
         setConstraints()
-    }
-    
-    func setupNavigationBar() {
-        title = "Сообщения"
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 

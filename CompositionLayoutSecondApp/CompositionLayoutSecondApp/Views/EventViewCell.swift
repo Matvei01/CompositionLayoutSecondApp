@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - EventViewCell
 final class EventViewCell: UICollectionViewCell, CellProtocol {
     static var reuseID: String = "EventViewCell"
     

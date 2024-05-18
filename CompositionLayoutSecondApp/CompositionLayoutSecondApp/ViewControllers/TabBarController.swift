@@ -27,12 +27,8 @@ final class TabBarController: UITabBarController {
         let messageVC = MessageViewController()
         messageVC.users = users
         
-        let navMessageVC = UINavigationController(rootViewController: messageVC)
-        
         let profileVC = ProfileViewController()
         profileVC.rows = rows
-        
-        let navProfileVC = UINavigationController(rootViewController: profileVC)
         
         viewControllers = [
             generateVC(
@@ -41,12 +37,12 @@ final class TabBarController: UITabBarController {
                 image: UIImage(systemName: "house.fill")
             ),
             generateVC(
-                rootViewController: navMessageVC,
+                rootViewController: messageVC,
                 title: "Messages",
                 image: UIImage(systemName: "message.fill")
             ),
             generateVC(
-                rootViewController: navProfileVC,
+                rootViewController: profileVC,
                 title: "Profile",
                 image: UIImage(systemName: "person.fill")
             )
@@ -56,8 +52,12 @@ final class TabBarController: UITabBarController {
     private func generateVC(rootViewController: UIViewController,
                             title: String, image: UIImage?) -> UIViewController {
         
-        rootViewController.tabBarItem.title = title
-        rootViewController.tabBarItem.image = image
-        return rootViewController
+        rootViewController.navigationItem.title = title
+        
+        let navigationVC = UINavigationController(rootViewController: rootViewController)
+        navigationVC.tabBarItem.title = title
+        navigationVC.tabBarItem.image = image
+        navigationVC.navigationBar.prefersLargeTitles = true
+        return navigationVC
     }
 }

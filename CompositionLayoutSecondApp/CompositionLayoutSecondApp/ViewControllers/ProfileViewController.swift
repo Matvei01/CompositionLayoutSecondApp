@@ -108,8 +108,6 @@ private extension ProfileViewController {
         
         addSubviews()
         
-        setupNavigationBar()
-        
         setConstraints()
     }
     
@@ -121,11 +119,6 @@ private extension ProfileViewController {
         for subview in subviews {
             view.addSubview(subview)
         }
-    }
-    
-    func setupNavigationBar() {
-        title = "Профиль"
-        navigationController?.navigationBar.prefersLargeTitles = true
     }
 }
 

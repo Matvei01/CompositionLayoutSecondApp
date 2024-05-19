@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class NewsHeaderCell: UICollectionReusableView, ReusableViewProtocol {
+final class NewsHeaderCell: UICollectionReusableView, SupplementaryViewProtocol {
     static var reuseID: String = "NewsHeaderCell"
     
     // MARK: - UI Elements
@@ -42,8 +42,9 @@ final class NewsHeaderCell: UICollectionReusableView, ReusableViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupHeader(header: String) {
-        headerTitle.text = header
+    // MARK: - Public methods
+    func setup(with section: CollectionSection) {
+        headerTitle.text = section.header
     }
     
     // MARK: - Private methods

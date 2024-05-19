@@ -26,12 +26,13 @@
 		1A6070EC2BEA7525005797E9 /* ReuseLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070EB2BEA7525005797E9 /* ReuseLabel.swift */; };
 		1A6070EE2BEA7CC6005797E9 /* ReuseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */; };
 		1A6070F22BEFC1E3005797E9 /* MessageViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */; };
-		1A6070F42BEFC6CE005797E9 /* TableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */; };
+		1A6070F42BEFC6CE005797E9 /* MessageCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F32BEFC6CE005797E9 /* MessageCellProtocol.swift */; };
 		1A6070F82BF0FF03005797E9 /* TableViewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6070F72BF0FF03005797E9 /* TableViewRow.swift */; };
+		1AB619D82BF9FC0A0048936C /* NewsFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB619D72BF9FC0A0048936C /* NewsFooterCell.swift */; };
 		1AC489B22BF8D0FB004ECB5F /* NewsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC489B12BF8D0FB004ECB5F /* NewsHeaderCell.swift */; };
 		1AC489B42BF8ED8D004ECB5F /* EventsHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC489B32BF8ED8D004ECB5F /* EventsHeaderCell.swift */; };
 		1AC489B62BF8FFB1004ECB5F /* UsersHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC489B52BF8FFB1004ECB5F /* UsersHeaderCell.swift */; };
-		1AC489B82BF90628004ECB5F /* ReusableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC489B72BF90628004ECB5F /* ReusableViewProtocol.swift */; };
+		1AC489B82BF90628004ECB5F /* SupplementaryViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AC489B72BF90628004ECB5F /* SupplementaryViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,12 +57,13 @@
 		1A6070EB2BEA7525005797E9 /* ReuseLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseLabel.swift; sourceTree = "<group>"; };
 		1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReuseButton.swift; sourceTree = "<group>"; };
 		1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewCell.swift; sourceTree = "<group>"; };
-		1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellProtocol.swift; sourceTree = "<group>"; };
+		1A6070F32BEFC6CE005797E9 /* MessageCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCellProtocol.swift; sourceTree = "<group>"; };
 		1A6070F72BF0FF03005797E9 /* TableViewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewRow.swift; sourceTree = "<group>"; };
+		1AB619D72BF9FC0A0048936C /* NewsFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFooterCell.swift; sourceTree = "<group>"; };
 		1AC489B12BF8D0FB004ECB5F /* NewsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsHeaderCell.swift; sourceTree = "<group>"; };
 		1AC489B32BF8ED8D004ECB5F /* EventsHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsHeaderCell.swift; sourceTree = "<group>"; };
 		1AC489B52BF8FFB1004ECB5F /* UsersHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersHeaderCell.swift; sourceTree = "<group>"; };
-		1AC489B72BF90628004ECB5F /* ReusableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableViewProtocol.swift; sourceTree = "<group>"; };
+		1AC489B72BF90628004ECB5F /* SupplementaryViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,10 +161,8 @@
 			children = (
 				1AC489AF2BF8D07A004ECB5F /* Headers */,
 				1AC489B02BF8D089004ECB5F /* Footers */,
-				1A6070DA2BEA26D1005797E9 /* NewsViewCell.swift */,
-				1A6070DC2BEA27FF005797E9 /* EventViewCell.swift */,
-				1A6070DE2BEA283B005797E9 /* UserViewCell.swift */,
-				1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */,
+				1AB619D92BFA36E20048936C /* CollectionCells */,
+				1AB619DA2BFA36FC0048936C /* TableViewCells */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -171,8 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				1A6070E12BEA292A005797E9 /* CellProtocol.swift */,
-				1A6070F32BEFC6CE005797E9 /* TableViewCellProtocol.swift */,
-				1AC489B72BF90628004ECB5F /* ReusableViewProtocol.swift */,
+				1A6070F32BEFC6CE005797E9 /* MessageCellProtocol.swift */,
+				1AC489B72BF90628004ECB5F /* SupplementaryViewProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -185,6 +185,24 @@
 				1A6070ED2BEA7CC6005797E9 /* ReuseButton.swift */,
 			);
 			path = ReuseViews;
+			sourceTree = "<group>";
+		};
+		1AB619D92BFA36E20048936C /* CollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				1A6070DA2BEA26D1005797E9 /* NewsViewCell.swift */,
+				1A6070DC2BEA27FF005797E9 /* EventViewCell.swift */,
+				1A6070DE2BEA283B005797E9 /* UserViewCell.swift */,
+			);
+			path = CollectionCells;
+			sourceTree = "<group>";
+		};
+		1AB619DA2BFA36FC0048936C /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				1A6070F12BEFC1E3005797E9 /* MessageViewCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 		1AC489AF2BF8D07A004ECB5F /* Headers */ = {
@@ -200,6 +218,7 @@
 		1AC489B02BF8D089004ECB5F /* Footers */ = {
 			isa = PBXGroup;
 			children = (
+				1AB619D72BF9FC0A0048936C /* NewsFooterCell.swift */,
 			);
 			path = Footers;
 			sourceTree = "<group>";
@@ -277,17 +296,18 @@
 				1A6070C92BEA242E005797E9 /* ProfileViewController.swift in Sources */,
 				1AC489B62BF8FFB1004ECB5F /* UsersHeaderCell.swift in Sources */,
 				1AC489B42BF8ED8D004ECB5F /* EventsHeaderCell.swift in Sources */,
+				1AB619D82BF9FC0A0048936C /* NewsFooterCell.swift in Sources */,
 				1A6070E22BEA292A005797E9 /* CellProtocol.swift in Sources */,
 				1A6070B42BEA2142005797E9 /* MainViewController.swift in Sources */,
 				1A6070EA2BEA74B8005797E9 /* ReuseImageView.swift in Sources */,
 				1A6070F82BF0FF03005797E9 /* TableViewRow.swift in Sources */,
-				1AC489B82BF90628004ECB5F /* ReusableViewProtocol.swift in Sources */,
+				1AC489B82BF90628004ECB5F /* SupplementaryViewProtocol.swift in Sources */,
 				1A6070CF2BEA24E0005797E9 /* CollectionItem.swift in Sources */,
 				1A6070C52BEA2376005797E9 /* TabBarController.swift in Sources */,
 				1A6070B02BEA2142005797E9 /* AppDelegate.swift in Sources */,
 				1A6070EC2BEA7525005797E9 /* ReuseLabel.swift in Sources */,
 				1A6070F22BEFC1E3005797E9 /* MessageViewCell.swift in Sources */,
-				1A6070F42BEFC6CE005797E9 /* TableViewCellProtocol.swift in Sources */,
+				1A6070F42BEFC6CE005797E9 /* MessageCellProtocol.swift in Sources */,
 				1A6070D12BEA250C005797E9 /* User.swift in Sources */,
 				1A6070DD2BEA27FF005797E9 /* EventViewCell.swift in Sources */,
 				1A6070DF2BEA283B005797E9 /* UserViewCell.swift in Sources */,

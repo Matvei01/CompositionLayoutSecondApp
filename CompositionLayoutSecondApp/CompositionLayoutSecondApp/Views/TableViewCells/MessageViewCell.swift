@@ -8,7 +8,7 @@
 import UIKit
 
 // MARK: - MessageViewCell
-final class MessageViewCell: UITableViewCell, TableViewCellProtocol {
+final class MessageViewCell: UITableViewCell, MessageCellProtocol {
     static var reuseID: String = "MessageViewCell"
     
     // MARK: - UI Elements

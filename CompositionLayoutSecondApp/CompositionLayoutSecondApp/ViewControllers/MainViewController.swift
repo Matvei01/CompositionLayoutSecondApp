@@ -19,7 +19,7 @@ final class MainViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.registerCells()
-        collectionView.registerHeaders()
+        collectionView.registerSupplementaryViews()
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .secondarySystemBackground
         collectionView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
@@ -61,8 +61,8 @@ private extension MainViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 61, trailing: 30)
-        section.boundarySupplementaryItems = [self.createHeaderSize()]
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
+        section.boundarySupplementaryItems = [self.createHeaderSize(), self.createFooterSize()]
         return section
     }
     
@@ -81,7 +81,7 @@ private extension MainViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 53, trailing: 30)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
         section.boundarySupplementaryItems = [self.createHeaderSize()]
         return section
     }
@@ -100,7 +100,7 @@ private extension MainViewController {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 16, leading: 30, bottom: 61, trailing: 30)
+        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
         section.boundarySupplementaryItems = [self.createHeaderSize()]
         return section
     }
@@ -112,7 +112,20 @@ private extension MainViewController {
                 heightDimension: .absolute(24)
             ),
             elementKind: UICollectionView.elementKindSectionHeader,
-            alignment: .top
+            alignment: .top,
+            absoluteOffset: CGPoint(x: 0, y: -12)
+        )
+    }
+    
+    private func createFooterSize() -> NSCollectionLayoutBoundarySupplementaryItem {
+        .init(
+            layoutSize: NSCollectionLayoutSize(
+                widthDimension: .fractionalWidth(1),
+                heightDimension: .absolute(15)
+            ),
+            elementKind: UICollectionView.elementKindSectionFooter,
+            alignment: .bottom,
+            absoluteOffset: CGPoint(x: 0, y: 11)
         )
     }
     
@@ -128,12 +141,12 @@ private extension MainViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellReuseIdentifier, for: indexPath)
         guard let cell = cell as? CellProtocol else { return UICollectionViewCell() }
-        
         cell.configure(with: item)
         return cell as? UICollectionViewCell ?? UICollectionViewCell()
     }
     
-    func configureReusableViews(for collectionView: UICollectionView, kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+    func configureSupplementaryViews(for collectionView: UICollectionView,
+                                     kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let item = sections[indexPath.section]
         let cellReuseIdentifier: String
         
@@ -143,6 +156,11 @@ private extension MainViewController {
             case 0: cellReuseIdentifier = NewsHeaderCell.reuseID
             case 1: cellReuseIdentifier = EventsHeaderCell.reuseID
             default: cellReuseIdentifier = UsersHeaderCell.reuseID
+            }
+        case UICollectionView.elementKindSectionFooter:
+            switch indexPath.section {
+            default:
+                cellReuseIdentifier = NewsFooterCell.reuseID
             }
             
         default:
@@ -154,8 +172,8 @@ private extension MainViewController {
             withReuseIdentifier: cellReuseIdentifier,
             for: indexPath
         )
-        guard let reusableView = reusableView as? ReusableViewProtocol else { return UICollectionReusableView()}
-        reusableView.setupHeader(header: item.header)
+        guard let reusableView = reusableView as? SupplementaryViewProtocol else { return UICollectionReusableView()}
+        reusableView.setup(with: item)
         return reusableView as? UICollectionReusableView ?? UICollectionReusableView()
     }
 }
@@ -168,7 +186,7 @@ private extension UICollectionView {
         register(UserViewCell.self, forCellWithReuseIdentifier: UserViewCell.reuseID)
     }
     
-    func registerHeaders() {
+    func registerSupplementaryViews() {
         register(
             NewsHeaderCell.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -185,6 +203,12 @@ private extension UICollectionView {
             UsersHeaderCell.self,
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
             withReuseIdentifier: UsersHeaderCell.reuseID
+        )
+        
+        register(
+            NewsFooterCell.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter,
+            withReuseIdentifier: NewsFooterCell.reuseID
         )
     }
 }
@@ -210,7 +234,7 @@ extension MainViewController: UICollectionViewDelegate {
                         viewForSupplementaryElementOfKind kind: String,
                         at indexPath: IndexPath) -> UICollectionReusableView {
         
-        configureReusableViews(for: collectionView, kind: kind, at: indexPath)
+        configureSupplementaryViews(for: collectionView, kind: kind, at: indexPath)
     }
 }
 

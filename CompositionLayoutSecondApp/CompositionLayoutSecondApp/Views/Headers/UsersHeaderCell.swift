@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class UsersHeaderCell: UICollectionReusableView, ReusableViewProtocol {
+final class UsersHeaderCell: UICollectionReusableView, SupplementaryViewProtocol {
     static var reuseID: String = "UsersHeaderCell"
     
     // MARK: - UI Elements
@@ -44,8 +44,9 @@ final class UsersHeaderCell: UICollectionReusableView, ReusableViewProtocol {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupHeader(header: String) {
-        headerTitle.text = header
+    // MARK: - Public methods
+    func setup(with section: CollectionSection) {
+        headerTitle.text = section.header
     }
     
     // MARK: - Private methods

@@ -37,6 +37,7 @@ final class ProfileViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension ProfileViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         rows.count

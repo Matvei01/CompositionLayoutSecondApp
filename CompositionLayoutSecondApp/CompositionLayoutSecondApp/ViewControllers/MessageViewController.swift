@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - MessageViewController
 final class MessageViewController: UIViewController {
     
     // MARK: - Public Properties
@@ -41,7 +42,6 @@ extension MessageViewController: UITableViewDataSource {
         let user = users[indexPath.row]
         
         guard let cell = cell as? MessageViewCell else { return UITableViewCell()}
-        
         cell.configure(with: user)
         cell.layer.cornerRadius = 30
         cell.selectionStyle = .none

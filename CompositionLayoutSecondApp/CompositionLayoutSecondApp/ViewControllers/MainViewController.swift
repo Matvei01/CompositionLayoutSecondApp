@@ -22,10 +22,9 @@ final class MainViewController: UIViewController {
         collectionView.registerSupplementaryViews()
         collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = .secondarySystemBackground
-        collectionView.contentInset = UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0)
+        collectionView.contentInset.top = 30
         return collectionView
     }()
-    
     
     // MARK: - Override Methods
     override func viewDidLoad() {
@@ -58,12 +57,7 @@ private extension MainViewController {
         
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 1)
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 25)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
-        section.boundarySupplementaryItems = [self.createHeaderSize(), self.createFooterSize()]
-        return section
+        return createSection(group: group, supplementaryItems: [self.createHeaderSize(), self.createFooterSize()])
     }
     
     private func createEventsSection() -> NSCollectionLayoutSection {
@@ -78,12 +72,7 @@ private extension MainViewController {
         
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 3)
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15)
-        
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .groupPaging
-        section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
-        section.boundarySupplementaryItems = [self.createHeaderSize()]
-        return section
+        return createSection(group: group, supplementaryItems: [self.createHeaderSize()])
     }
     
     private func createUsersSection() -> NSCollectionLayoutSection {
@@ -97,11 +86,16 @@ private extension MainViewController {
         
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 1)
         group.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 20)
+        return createSection(group: group, supplementaryItems: [self.createHeaderSize()])
+    }
+    
+    private func createSection(group: NSCollectionLayoutGroup,
+                               supplementaryItems: [NSCollectionLayoutBoundarySupplementaryItem]) -> NSCollectionLayoutSection {
         
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .groupPaging
         section.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 30, bottom: 0, trailing: 30)
-        section.boundarySupplementaryItems = [self.createHeaderSize()]
+        section.boundarySupplementaryItems = supplementaryItems
         return section
     }
     
@@ -167,14 +161,14 @@ private extension MainViewController {
             return UICollectionReusableView()
         }
         
-        let reusableView = collectionView.dequeueReusableSupplementaryView(
+        let supplementaryView = collectionView.dequeueReusableSupplementaryView(
             ofKind: kind,
             withReuseIdentifier: cellReuseIdentifier,
             for: indexPath
         )
-        guard let reusableView = reusableView as? SupplementaryViewProtocol else { return UICollectionReusableView()}
-        reusableView.setup(with: item)
-        return reusableView as? UICollectionReusableView ?? UICollectionReusableView()
+        guard let supplementaryView = supplementaryView as? SupplementaryViewProtocol else { return UICollectionReusableView()}
+        supplementaryView.setup(with: item)
+        return supplementaryView as? UICollectionReusableView ?? UICollectionReusableView()
     }
 }
 

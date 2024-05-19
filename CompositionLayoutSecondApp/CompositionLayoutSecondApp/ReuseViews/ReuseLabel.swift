@@ -9,9 +9,16 @@ import UIKit
 
 final class ReuseLabel: UILabel {
     
-    init(font: UIFont, textColor: UIColor? = nil, alignment: NSTextAlignment? = nil, lines: Int? = nil) {
+    init(font: UIFont,
+         textColor: UIColor? = nil,
+         alignment: NSTextAlignment? = nil, lines: Int? = nil) {
         super.init(frame: .zero)
-        setupLabel(font: font, textColor: textColor ?? .black, alignment: alignment ?? .left, lines: lines ?? 0)
+        setupLabel(
+            font: font,
+            textColor: textColor ?? .black,
+            alignment: alignment ?? .left,
+            lines: lines ?? 0
+        )
     }
     
     @available(*, unavailable)
@@ -19,7 +26,8 @@ final class ReuseLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupLabel(font: UIFont, textColor: UIColor, alignment: NSTextAlignment, lines: Int) {
+    private func setupLabel(font: UIFont, textColor: UIColor,
+                            alignment: NSTextAlignment, lines: Int) {
         self.font = font
         self.textColor = textColor
         textAlignment = alignment
